@@ -13,6 +13,10 @@ const data = [
       {
         title: "Branch 1.2",
         key: "Branch 1.2"
+      },
+      {
+        title: "Branch 1.3",
+        key: "Branch 1.3"
       }
     ]
   },
@@ -115,7 +119,7 @@ export default function Demo() {
         loop(data, dropKey, (item) => {
           item.children = item.children || [];
           // where to insert 示例添加到尾部，可以是随意位置
-          item.children.push(dragObj);
+          item.children.unshift(dragObj);
         });
       } else if (
         (info.node.props.children || []).length > 0 && // Has children
